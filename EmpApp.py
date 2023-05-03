@@ -6,7 +6,6 @@ from config import *
 
 app = Flask(__name__)
 
-bucket = custombucket
 region = customregion
 
 db_conn = connections.Connection(
@@ -23,7 +22,7 @@ table = 'giantdb'
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    return render_template('AddEmp.html')
+    return render_template('index.html')
 
 
 @app.route("/about", methods=['POST'])
